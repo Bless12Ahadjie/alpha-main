@@ -1,0 +1,9 @@
+.container{
+    background: #fff;
+    width: 81.7vw;
+    height: 86.9vh;
+    flex-shrink: 0;
+    position: relative;
+    float: right;
+    margin-top: -560.5px;
+}

@@ -1,5 +1,4 @@
 import {Routes, Route } from 'react-router-dom';
-import Button from './atoms/Button';
 import SignUp from './Templates/Sign Up/SignUp';
 import Signin from './Templates/SignIn/Signin';
 import Dashboard from './Templates/Dashboard/Dashboard';

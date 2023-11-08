@@ -5,6 +5,8 @@ import Dashboard from './Templates/Dashboard/Dashboard';
 import Homepage from './Templates/Homepage/Homepage';
 import Onboard2 from './Templates/Onboard/Onboard2';
 import Onboard1 from './Templates/Onboard/Onboard1';
+import Error from './Templates/404/Error';
+
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
        <Route path='/Dashboard' element={<Dashboard/> }/>
        <Route path='/register' element={ <SignUp/>}/>
        <Route path='/Sign-in' element={ <Signin/>} />
+       <Route path='*' element={<Error/>}/>
+       
 
 
 

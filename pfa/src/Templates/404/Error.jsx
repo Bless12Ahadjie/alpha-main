@@ -11,7 +11,7 @@ const Error = () => {
         <div className={styles.container}>
             <div className={styles.Txt}>
                 <p className={styles.topTxt}>404</p>
-                <p className={styles.downTxt}>Page either does not exit or is under construction <button className={styles.bckbtn} onClick={()=>{navigate(-1)}}>Back</button> </p>
+                <p className={styles.downTxt}>Page either does not exit or is under heavy construction <button className={styles.bckbtn} onClick={()=>{navigate(-1)}}>Back</button> </p>
             </div>
 
            <img className={styles.arrow} src={arrow} alt="arrow" />

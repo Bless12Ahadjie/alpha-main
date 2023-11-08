@@ -17,8 +17,10 @@
     z-index: 3;
 }
 .topTxt{
-    color: linear-gradient(54deg,rgba(102, 130, 185, 1), rgba(102, 130, 185, 1), rgba(96, 225, 248, 1), rgba(90, 161, 251, 1), rgba(102, 130, 185, 1));
-    font-size: 96px;
+    background: linear-gradient(88deg, #6682B9 -131.07%, #6682B9 11.4%, #60E1F8 46.46%, #5AA1FB 93.21%, #6682B9 173.35%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; font-size: 96px;
     font-style: normal;
     font-weight: 700;
 }

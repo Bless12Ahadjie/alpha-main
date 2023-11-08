@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Txt{
+    width: 551px;
+    height: 164px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 202px;
+    position: relative;
+    z-index: 3;
+}
+.topTxt{
+    color: linear-gradient(54deg,rgba(102, 130, 185, 1), rgba(102, 130, 185, 1), rgba(96, 225, 248, 1), rgba(90, 161, 251, 1), rgba(102, 130, 185, 1));
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+}
+.downTxt{
+    color: #818181;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: -86px;
+}
+.arrow{
+    margin-top: -324px;
+    margin-left: 295px;
+    width: 547.946px;
+    height: 535.273px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 0;
+}
+.bckbtn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #432CDC;
+}

@@ -26,10 +26,10 @@
 }
 .activeTxt{
     text-decoration: none;
-    color: #605DEC;
-    font-size: 18px;
+    
+    font-size: 15px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 200;
     line-height: normal;
 }
 .navTxt{
@@ -43,7 +43,7 @@ text-decoration: none;
 }
 
 .bottomTxt{
-    color: #c2c2c2;
+color: #c2c2c2;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;

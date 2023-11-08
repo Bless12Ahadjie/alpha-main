@@ -14,10 +14,7 @@ width: 515px;
     line-height: normal;
     width: 515px;
 }
-.buttonContainer{
-    width: 158px;
-    height: 42px;
-}
+
 .btn{
     color: #fff;
     width: 181px;
@@ -30,4 +27,6 @@ width: 515px;
     font-weight: 700;
     line-height: normal;
     cursor: pointer;
+    margin-top: 16px;
+
 }

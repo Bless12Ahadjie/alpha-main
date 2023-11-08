@@ -16,7 +16,7 @@ const HomeRightSide = () => {
             <p className={styles.headTxt}>Empower your financial future with Alpha:</p>
             <p className={styles.btmTxt}>Seamlessly track, manage, and achieve  your financial goals with our intuitive and secure apps.</p>
             </div>
-            <Link className={styles.buttonContainer} to='/Sign-in'><Button className={styles.btn} btnName='Join us'/></Link>
+            <Link  to='/Sign-in'><Button className={styles.btn} btnName='Join us'/></Link>
     
         </div>
     );

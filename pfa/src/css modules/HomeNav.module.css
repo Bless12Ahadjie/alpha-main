@@ -1,0 +1,22 @@
+.navContainer{
+    width: 100vw;
+    height: 67px;
+    flex-shrink: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 64px;
+}
+
+.navItem{
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-decoration: none;
+margin-right: 18px;
+}
+.navItem:first-child{
+margin-left: 102px;
+}

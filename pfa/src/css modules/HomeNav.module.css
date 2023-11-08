@@ -5,10 +5,13 @@
     background-color: #E8EDFD;
     display: flex;
     align-items: center;
-    justify-content: start;
-    padding-left: 64px;
+    justify-content: flex-start;
+    overflow-y: hidden;
 }
 
+.img{
+    margin-left: 64px;
+}
 .navItem{
 font-size: 16px;
 font-style: normal;

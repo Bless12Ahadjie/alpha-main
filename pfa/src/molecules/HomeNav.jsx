@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 const HomeNav = () => {
     return (
         <div className= {styles.navContainer}>
-            <img src={logo} alt="" />
+            <img className={styles.img} src={logo} alt="" />
             <nav className={styles.nav}>
 
                 <NavLink to='/' className={styles.navItem} style={({isActive})=>({color: isActive? "#432CDC" : "#8C9093"}) }>Home</NavLink>

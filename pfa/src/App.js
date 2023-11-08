@@ -3,6 +3,8 @@ import SignUp from './Templates/Sign Up/SignUp';
 import Signin from './Templates/SignIn/Signin';
 import Dashboard from './Templates/Dashboard/Dashboard';
 import Homepage from './Templates/Homepage/Homepage';
+import Onboard2 from './Templates/Onboard/Onboard2';
+import Onboard1 from './Templates/Onboard/Onboard1';
 
 
 function App() {
@@ -11,6 +13,8 @@ function App() {
   
    <Routes>
        <Route path='/' element={ <Homepage/>}/>
+       <Route path='/welcome-2' element={ <Onboard1/>}/>
+       <Route path='/welcome-1' element={ <Onboard2/>}/>
        <Route path='/Dashboard' element={<Dashboard/> }/>
        <Route path='/register' element={ <SignUp/>}/>
        <Route path='/Sign-in' element={ <Signin/>} />

@@ -1,10 +1,10 @@
 import React from 'react';
-import HeroImg from '../asset/LandingPageHeroImg.png';
+import HeroImg from '../asset/HeroImg.png';
 
 
 const HomeLeftSide = () => {
     const img = {
-        width: '301px',
+        width: '501px',
         height: '367px',
         flexshrink: '0'
 

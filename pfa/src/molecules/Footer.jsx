@@ -5,8 +5,8 @@ const Footer = () => {
     return (
         <div className={styles.footer}>
            <footer>
-            <Link >FAQ</Link>
-            <Link >Privacy ppolicy</Link>
+            <Link  className={styles.navItem} >FAQ</Link>
+            <Link   className={styles.navItem}>Privacy Policy</Link>
 
            </footer>
         </div>

@@ -5,19 +5,19 @@ import { Link } from 'react-router-dom';
 
 const HomeRightSide = () => {
     const container ={
-        width: '515px',
+        width: '158px',
         height: '195px',
-        flexShrink: '0',
-
     }
     return (
         
 
         <div style={container}>
+            <div>
             <p className={styles.headTxt}>Empower your financial future with Alpha:</p>
             <p className={styles.btmTxt}>Seamlessly track, manage, and achieve  your financial goals with our intuitive and secure apps.</p>
-            <Link to='/Sign-in'><Button className={styles.btn} btnName='Join us'/></Link>
-            
+            </div>
+            <Link className={styles.buttonContainer} to='/Sign-in'><Button className={styles.btn} btnName='Join us'/></Link>
+    
         </div>
     );
 }

@@ -14,7 +14,7 @@ import iconImg from '../../asset/Icon.png';
 
 const Onboard1 = () => {
     return (
-        <div>
+        <div style={{overflow: 'hidden'}} >
         <HomeNav/>
         <div className={styles.container}>
 

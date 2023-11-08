@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 
 const Onboard2 = () => {
     return (
-        <div>
+        <div style={{overflow: 'hidden'}}>
             <HomeNav/>
             <div className={styles.container}>
             <div className={styles.wrapperLeft}>

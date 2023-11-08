@@ -3,8 +3,8 @@
     align-items: flex-start;
     justify-content: space-between;
     width: 100vw;
-    margin-top: 20px;
-    margin-bottom: 135PX;
+    margin-top: 40px;
+    margin-bottom: 155PX;
 
 }
 .wrapperLeft{
@@ -101,7 +101,7 @@
     border: none;
     background: #432CDC;
     color: #FFF;
-    font-size: 12px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -145,7 +145,7 @@
     font-weight: 700;
     line-height: normal;
     cursor: pointer;
-    margin-top: 160px;
+    margin-top: 190px;
 
 }
 .Onboard2holder{

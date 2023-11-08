@@ -1,0 +1,15 @@
+.Box{
+    width: 219px;
+    height: 215px;
+    flex-shrink: 0;
+    border-radius: 21px;
+    background: #E9E4E4;
+}
+
+.headBox{
+    width: 219px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 21px;
+    background: #C2C2C2;
+}

@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 45px 0 65px 0;
+  margin: 30px 0 65px 0;
 }
 
 .wrapper{
@@ -11,9 +11,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 45%;
-  height: 55%px;
-  border-radius: 35px;
+  width: 40%;
+  height: 10%;
+  border-radius: 25px;
   background: #FFF;
   padding: 10px;
 }
@@ -22,26 +22,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 68px 86px 49px;
+    margin: -16px 68px 16px 62px;
   }
   .Header{
     color: #1E1E1E;
     text-align: center;
-    font-size: 32px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-bottom: -10px;
+    margin-bottom: -5px;
     }
     
     .subTxt{
     color: #898989;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-bottom: 51px;
+    margin-bottom: 43px;
     }
     .span{
     text-decoration: none;
@@ -50,17 +50,18 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    font-size: 15px;
     }
 
     .btn{
       width: 458px;
-      height: 57px;
+      height: 41px;
       border-radius: 7px;
       border: 1px solid #432CDC;
       background: #432CDC;
       color: #F6F8FE;
       text-align: center;
-      font-size: 20px;
+      font-size: 15px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -71,7 +72,7 @@
       align-items: center;
       justify-content: space-between;
       width: 458px;
-      height: 47px;
+      height: 41px;
       border-radius: 7px;
       border: 1px solid #C2C2C2;
       background: #FFF;
@@ -90,6 +91,7 @@
       color: #432CDC;
       text-align: start;
       margin: -30px 0 20px -340px;
+      font-size: 14px;
     
     }
     .line{
@@ -114,7 +116,7 @@
       align-items: center;
       justify-content: space-between;
       width: 414px;
-      height: 47px;
+      height: 41px;
       border-radius: 7px;
       border: 1px solid #C2C2C2;
       background: #FFF;

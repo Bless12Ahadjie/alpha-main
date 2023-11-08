@@ -26,7 +26,7 @@ const Signin = () => {
                 <div className={styles.line}></div>
             </div>
             <input className={styles.input} type="text" name="" id="" placeholder='Email Address'/>
-            <input className={styles.input} type="text" name="" id="" placeholder='Password'/>
+            <input className={styles.input} type="password" name="" id="" placeholder='Password'/>
             <Link className={styles.forgotPswd}>forgot password?</Link>
              <Button className={styles.btn} btnName="Sign In"/>
         </div>

@@ -4,6 +4,8 @@ import OverviewBox from '../organisms/OverviewBox';
 import Header from './Header';
 import Box2 from '../organisms/Box2';
 import Box3 from '../organisms/Box3';
+import DashSection from '../organisms/DashSection';
+
 
 
 const Body = () => {
@@ -15,6 +17,9 @@ const Body = () => {
             <Box2/>
             <Box3/>
             </div>
+           <div>
+           <DashSection/>
+           </div>
 
         </div>
     );

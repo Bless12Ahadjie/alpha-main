@@ -94,20 +94,6 @@ const SignUp = () => {
             onChange={(ev) => setPassword(ev.target.value)}
           />
 
-<<<<<<< HEAD
-        <input
-          className={styles.input}
-          type="password"
-          name=""
-          id=""
-          placeholder="Confirm Password"
-          value={confirmPassword}
-          onChange={(ev) => setConfirmPassword(ev.target.value)}
-        />
-        {/* Use the correct onSubmit function */}
-        <button  className={styles.btn} onClick={register} type='submit' >Sign Up</button>
-        
-=======
           <input
             className={styles.input}
             type="password"
@@ -122,7 +108,6 @@ const SignUp = () => {
             Sign Up
           </button>
         </form>
->>>>>>> 27ae28499ccd8f1ae23d9ba0c15349ff323ccd20
       </div>
     </div>
   );

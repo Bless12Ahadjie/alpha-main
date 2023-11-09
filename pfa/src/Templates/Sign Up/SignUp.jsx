@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import Button from '../../atoms/Button';
 import { Link } from 'react-router-dom';
 import styles from '../../css modules/SignUp.module.css';
 
 const SignUp = () => {
-  const navigate = useNavigate(); // Create a navigate function
+  const navigate = useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -20,14 +20,27 @@ const SignUp = () => {
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (response.status !== 200) {
-      const responseData = await response.json(); // Assuming server returns JSON
-      alert(`Registration failed: ${responseData.message}`);
-    } else {
-      alert('Registration successful!');
-      navigate('/welcome-1');
+    try {
+      const responseData = await response.json();
+      
+      if (!response.ok) {
+        if (responseData && responseData.message) {
+          alert(`Registration failed: ${responseData.message}`);
+        } else {
+          alert('Registration failed: An unknown error occurred.');
+        }
+      } else {
+        alert('Registration successful!');
+        navigate('/welcome-1');
+      }
+    } catch (error) {
+      console.error('Error parsing server response:', error);
+      alert('Registration failed: An unexpected error occurred.');
     }
   }
+
+
+
 
   return (
     <div className={styles.signup}>

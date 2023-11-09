@@ -6,6 +6,7 @@ import Homepage from './Templates/Homepage/Homepage';
 import Onboard2 from './Templates/Onboard/Onboard2';
 import Onboard1 from './Templates/Onboard/Onboard1';
 import Error from './Templates/404/Error';
+import SetProfile from './Templates/SetProfile/SetProfile';
 
 
 
@@ -17,6 +18,7 @@ function App() {
        <Route path='/' element={ <Homepage/>}/>
        <Route path='/welcome-2' element={ <Onboard1/>}/>
        <Route path='/welcome-1' element={ <Onboard2/>}/>
+       <Route path='/set-profile' element={ <SetProfile/>}/>
        <Route path='/Dashboard' element={<Dashboard/> }/>
        <Route path='/register' element={ <SignUp/>}/>
        <Route path='/Sign-in' element={ <Signin/>} />

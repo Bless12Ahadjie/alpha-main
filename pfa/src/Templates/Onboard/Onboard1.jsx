@@ -76,7 +76,7 @@ const Onboard1 = () => {
                 </div>
                 
             </div>
-            <Link to='/welcome-2'>
+            <Link to='/set-profile'>
             <button className={styles.Onboard1btn}>Continue</button>
             </Link>
 

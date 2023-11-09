@@ -32,8 +32,7 @@
     margin-top: -86px;
 }
 .arrow{
-    margin-top: -324px;
-    margin-left: 295px;
+    margin: -324px 0 0  295px;
     width: 547.946px;
     height: 535.273px;
     flex-shrink: 0;
@@ -45,4 +44,5 @@
     border: none;
     cursor: pointer;
     color: #432CDC;
+    font-size: 15px;
 }

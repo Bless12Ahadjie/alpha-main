@@ -1,6 +1,8 @@
 import React from 'react';
 import HomeNav from '../../molecules/HomeNav';
 import ProfileHero from '../../organisms/ProfileHero';
+import ProfileForm from '../../molecules/ProfileForm';
+import Footer from '../../molecules/Footer';
 
 const SetProfile = () => {
 
@@ -13,6 +15,8 @@ const SetProfile = () => {
         <div style={styles.container}>
             <HomeNav/>
             <ProfileHero/>
+            <ProfileForm />
+            <Footer/>
         </div>
     );
 }

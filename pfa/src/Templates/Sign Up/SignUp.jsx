@@ -2,8 +2,28 @@ import React from 'react'
 import Button from '../../atoms/Button';
 import { Link } from 'react-router-dom';
 import styles from '../../css modules/SignUp.module.css'
-
+import { useState } from 'react';
 const SignUp = () => {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  async function register(ev) {
+    ev.preventDefault();
+
+    const response = await fetch('http://localhost:4000/api/user/register', {
+      method: 'POST',
+      body: JSON.stringify({name, email, password, confirmPassword}),
+      headers: {'Content-Type' : 'application/json'}
+    });
+    if(response.status !== 200){
+      alert('registration failed');
+    }else{
+      alert('registration successful!')
+    }
+  }
   return (
 <div className={styles.signup}>
 <div className={styles.wrapper}>
@@ -24,11 +44,40 @@ const SignUp = () => {
                 <p className= {styles.or}>OR</p>
                 <div className={styles.line}></div>
             </div>
-        <input className={styles.input} type="text" name="" id="" placeholder='Name'/>
-        <input className={styles.input} type="text" name="" id="" placeholder='Email Address'/>
-        <input className={styles.input} type="text" name="" id="" placeholder='Password'/>
-        <input className={styles.input} type="text" name="" id="" placeholder='Confirm Password'/>
-         <Button className={styles.btn} btnName="Sign Up"/>
+        <input
+         className={styles.input} 
+         type="text"
+         name="" id="" 
+         placeholder='Name' 
+         value={name} 
+         onChange={ev => setName(ev.target.value)}
+         />
+
+        <input 
+        className={styles.input} 
+        type="text"
+        name="" id="" 
+        placeholder='Email Address'
+        value={email} 
+        onChange={ev => setEmail(ev.target.value)}
+        />
+
+        <input 
+        className={styles.input} 
+        type="text" 
+        name="" id="" 
+        placeholder='Password'
+        value={password} 
+        onChange={ev => setPassword(ev.target.value)}
+        />
+        <input 
+        className={styles.input} 
+        type="text" 
+        name="" id="" 
+        placeholder='Confirm Password'
+        value={confirmPassword} 
+        onChange={ev => setConfirmPassword(ev.target.value)}/>
+         <Button className={styles.btn} onSubmit={register} btnName="Sign Up"/>
          
 
     </div>

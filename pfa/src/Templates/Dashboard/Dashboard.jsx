@@ -11,6 +11,8 @@ const Dashboard = () => {
     height: '100vh',
     backgroundColor: '#fff'
   }
+
+  
   return (
     <div>
         <div style={container}>

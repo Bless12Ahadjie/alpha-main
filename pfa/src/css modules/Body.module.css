@@ -16,3 +16,8 @@
     margin: 101px 0 45px 88px;
  
 }
+.sections{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

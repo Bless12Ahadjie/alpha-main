@@ -1,0 +1,13 @@
+.container{
+    width: 334px;
+    height: 221px;
+    border-radius: 19px;
+    background: #FFE7D1;
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 21px;
+    
+}

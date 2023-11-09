@@ -11,7 +11,7 @@ const HomeRightSide = () => {
     return (
         
 
-        <div style={container}>
+        <div style={container} className={styles.container}>
             <div>
             <p className={styles.headTxt}>Empower your financial future with Alpha:</p>
             <p className={styles.btmTxt}>Seamlessly track, manage, and achieve  your financial goals with our intuitive and secure apps.</p>

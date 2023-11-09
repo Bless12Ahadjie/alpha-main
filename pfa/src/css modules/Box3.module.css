@@ -3,7 +3,7 @@
     height: 215px;
     flex-shrink: 0;
     border-radius: 21px;
-    background: #E9E4E4;
+    background: #DAF1DF;
 }
 
 .headBox{
@@ -11,7 +11,7 @@
     height: 90px;
     flex-shrink: 0;
     border-radius: 21px;
-    background: #C2C2C2;
+    background: #BDE5C5;
     display: flex;
     flex-direction: column;
     justify-content: center;

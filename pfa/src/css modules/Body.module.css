@@ -1,9 +1,18 @@
 .container{
     background: #fff;
     width: 81.7vw;
-    height: 86.9vh;
+    height: 100vh;
     flex-shrink: 0;
     position: relative;
-    float: right;
-    margin-top: -560.5px;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.OverBox{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 770px;
+    margin: 101px 0 45px 88px;
+ 
 }

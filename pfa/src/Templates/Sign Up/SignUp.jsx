@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Button from '../../atoms/Button';
 import { Link } from 'react-router-dom';
 import styles from '../../css modules/SignUp.module.css';
 
 const SignUp = () => {
+  const navigate = useNavigate(); // Create a navigate function
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -22,6 +24,7 @@ const SignUp = () => {
       alert('Registration failed');
     } else {
       alert('Registration successful!');
+      navigate('/welcome-1'); // Use navigate instead of history.push
     }
   }
 
@@ -59,36 +62,38 @@ const SignUp = () => {
           <div className={styles.line}></div>
         </div>
 
-        <input
-          className={styles.input}
-          type="text"
-          name=""
-          id=""
-          placeholder="Name"
-          value={name}
-          onChange={(ev) => setName(ev.target.value)}
-        />
+        <form onSubmit={register}>
+          <input
+            className={styles.input}
+            type="text"
+            name=""
+            id=""
+            placeholder="Name"
+            value={name}
+            onChange={(ev) => setName(ev.target.value)}
+          />
 
-        <input
-          className={styles.input}
-          type="text"
-          name=""
-          id=""
-          placeholder="Email Address"
-          value={email}
-          onChange={(ev) => setEmail(ev.target.value)}
-        />
+          <input
+            className={styles.input}
+            type="text"
+            name=""
+            id=""
+            placeholder="Email Address"
+            value={email}
+            onChange={(ev) => setEmail(ev.target.value)}
+          />
 
-        <input
-          className={styles.input}
-          type="password"
-          name=""
-          id=""
-          placeholder="Password"
-          value={password}
-          onChange={(ev) => setPassword(ev.target.value)}
-        />
+          <input
+            className={styles.input}
+            type="password"
+            name=""
+            id=""
+            placeholder="Password"
+            value={password}
+            onChange={(ev) => setPassword(ev.target.value)}
+          />
 
+<<<<<<< HEAD
         <input
           className={styles.input}
           type="password"
@@ -101,6 +106,22 @@ const SignUp = () => {
         {/* Use the correct onSubmit function */}
         <button  className={styles.btn} onClick={register} type='submit' >Sign Up</button>
         
+=======
+          <input
+            className={styles.input}
+            type="password"
+            name=""
+            id=""
+            placeholder="Confirm Password"
+            value={confirmPassword}
+            onChange={(ev) => setConfirmPassword(ev.target.value)}
+          />
+
+          <button className={styles.btn} type="submit">
+            Sign Up
+          </button>
+        </form>
+>>>>>>> 27ae28499ccd8f1ae23d9ba0c15349ff323ccd20
       </div>
     </div>
   );

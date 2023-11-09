@@ -21,10 +21,11 @@ const SignUp = () => {
     });
 
     if (response.status !== 200) {
-      alert('Registration failed');
+      const responseData = await response.json(); // Assuming server returns JSON
+      alert(`Registration failed: ${responseData.message}`);
     } else {
       alert('Registration successful!');
-      navigate('/welcome-1'); // Use navigate instead of history.push
+      navigate('/welcome-1');
     }
   }
 

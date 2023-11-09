@@ -99,7 +99,7 @@ const SignUp = () => {
           onChange={(ev) => setConfirmPassword(ev.target.value)}
         />
         {/* Use the correct onSubmit function */}
-        <button  className={styles.btn} onSubmit={register} type='submit' >Sign Up</button>
+        <button  className={styles.btn} onClick={register} type='submit' >Sign Up</button>
         
       </div>
     </div>

@@ -77,8 +77,8 @@ const FileUpload = () => {
   };
 
   return (
-    <div style={styles.fileUploadContainer} className={styles.fileUploadContainer}>
-      <label style={styles.radialButtonContainer} className={styles.radialButtonContainer} >
+    <div style={styles.fileUploadContainer} >
+      <label style={styles.radialButtonContainer}  >
         <input
           type="file"
           accept="image/*"
@@ -86,10 +86,10 @@ const FileUpload = () => {
           style={styles.input}
           className={styles.input}
         />
-        <span style={styles.radialButtonIcon} className={styles.radialButtonIcon}>+</span>
+        <span style={styles.radialButtonIcon} >+</span>
       </label>
       {previewUrl && (
-        <div style={styles.previewContainer} className= {styles.previewContainer}>
+        <div style={styles.previewContainer} >
           <img
             src={previewUrl}
             alt="Preview"

@@ -1,12 +1,15 @@
 import React from 'react';
 
+const FullName = 'Bless Ahadjie'
+
 const ProfileForm = () => {
 const styles ={
 container:{
     marginLeft: '65px',
     overflow: 'hidden',
     width: '100vw',
-    marginBottom: '153px',
+    marginBottom: '233px',
+    marginTop: '65px'
     
 },
 form: {
@@ -52,10 +55,11 @@ btn:{
 input:{
     borderRadius: '5px',
     border: '1px solid rgba(23, 31, 37, 0.50)',
-    width: '286px',
+    width: '266px',
     height: '36px',
     flexShrink: '0',
-    backgroundColor: '#E8EDFD'
+    backgroundColor: '#E8EDFD',
+    paddingLeft: '21px'
 
 },
 }
@@ -67,12 +71,12 @@ input:{
                 <div style={styles.LeftInfo}>
                     <div style={styles.LeftInfoWrapper}>
                     <label style={styles.label} htmlFor="">Full Name</label>
-                    <input style={styles.input} type="text" />
+                    <input style={styles.input} type="text" placeholder={FullName} disabled/>
                     </div>
 
                     <div style={styles.LeftInfoWrapper}>
                     <label style={styles.label}  htmlFor="">DIsplay Name</label>
-                    <input style={styles.input} type="text" />
+                    <input style={styles.input} type="number" />
                     </div>                  
                     
                      <div style={styles.LeftInfoWrapper}>
@@ -85,12 +89,12 @@ input:{
                 <div style={styles.LeftInfo}>
                     <div style={styles.LeftInfoWrapper}>
                     <label style={styles.label} htmlFor="">Spending Limit</label>
-                    <input style={styles.input} type="text" />
+                    <input style={styles.input} type="number" />
                     </div>
 
                     <div style={styles.LeftInfoWrapper}>
-                    <label style={styles.label}  htmlFor="">Savings</label>
-                    <input style={styles.input} type="text" />
+                    <label style={styles.label}  htmlFor="">How much will you like to save</label>
+                    <input style={styles.input} type="number" />
                     </div>                  
 
                 </div>

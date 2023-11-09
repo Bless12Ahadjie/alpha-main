@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../../atoms/Button';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+
 import styles from '../../css modules/SignIn.module.css'
 
 const Signin = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [redirect, setRedirect] = useState('');
+
+  async function login(ev) {
+    ev.preventDefault();
+    const response = await fetch("http://localhost:4000/api/user/login", {
+      method: 'POST',
+      body: JSON.stringify({email, password}),
+      headers: {'Content-Type': 'application/json'},
+      credentials: 'include',
+    });
+    if(response.ok){
+      setRedirect(true)
+    }else{
+      alert('wrong credentials')
+    }
+  } 
+  if (redirect){
+    return <Navigate to={"/Dashboardp"}/>
+  }
   return (
     <div className={styles.signup}>
     <div className={styles.wrapper}>
@@ -25,16 +47,36 @@ const Signin = () => {
                 <p className= {styles.or}>OR</p>
                 <div className={styles.line}></div>
             </div>
-            <input className={styles.input} type="text" name="" id="" placeholder='Email Address'/>
-            <input className={styles.input} type="password" name="" id="" placeholder='Password'/>
+            <form onSubmit={login}>
+            <input 
+            className={styles.input} 
+            type="text" 
+            name="" 
+            id="" 
+            placeholder='Email Address'
+            value={email}
+            onChange={(ev) => setEmail(ev.target.value)}
+            />
+
+            <input 
+            className={styles.input} 
+            type="password" 
+            name="" 
+            id="" 
+            placeholder='Password'
+            value={password}
+            onChange={(ev) => setPassword(ev.target.value)}
+            />
+
             <Link className={styles.forgotPswd}>forgot password?</Link>
              <Button className={styles.btn} btnName="Sign In"/>
-        </div>
-             
-    
-        </div>
-    </div>
-    
+               </form>
+                </div>
+              </div>
+            </div>
+
+
+     
   )
 }
 

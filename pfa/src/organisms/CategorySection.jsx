@@ -32,6 +32,7 @@ const CategorySection = () => {
 
   return (
     <div className={styles.container} >
+        <p className={styles.headTxt}>Add Expepnditure</p>
         <form style={{width: '100%',}} action="">
         <select id="category" style={selectStyle}>
         <option value="">Category...</option>
@@ -41,11 +42,11 @@ const CategorySection = () => {
         <option value="Clothing">Clothing</option>
         <option value="Others">Others</option>
        </select>
-       <div>
-            <label htmlFor="">amount</label>
-            <input type="text" name="" id="" />
+       <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'flex-start',marginLeft:'32px',marginBottom:'28px'}}>
+            <label className={styles.label} htmlFor="">amount</label>
+            <input className={styles.amtInput} type="text" name="" id="" />
        </div>
-            <button>Add</button>
+            <button className={styles.btn}>Add</button>
       
         </form>
     </div>

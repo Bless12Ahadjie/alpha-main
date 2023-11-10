@@ -11,3 +11,35 @@
     padding-top: 21px;
     
 }
+.label{
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #252525;
+    margin-top: 31px;
+    margin-bottom: -1px;
+
+}
+.amtInput{
+    width: 254px;
+    height: 32px;
+    border: none;
+
+}
+.btn{
+    width: 264px;
+   height: 32px;
+   margin-left: 31px;
+   border: none;
+   cursor: pointer;
+   
+
+
+}
+.headTxt{
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: -14px;
+}

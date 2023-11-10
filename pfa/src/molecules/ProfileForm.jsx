@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FullName = 'Bless Ahadjie'
+// const FullName = 'Keneth Dapaa'
 
 const ProfileForm = () => {
 const styles ={
@@ -70,14 +70,14 @@ input:{
                 <div style={styles.form}>
                 <div style={styles.LeftInfo}>
                     <div style={styles.LeftInfoWrapper}>
-                    <label style={styles.label} htmlFor="">Full Name</label>
-                    <input style={styles.input} type="text" placeholder={FullName} disabled/>
+                    <label style={styles.label} htmlFor="">Username</label>
+                    <input style={styles.input} type="text" placeholder='Don Full' />
                     </div>
-
+{/* 
                     <div style={styles.LeftInfoWrapper}>
-                    <label style={styles.label}  htmlFor="">DIsplay Name</label>
+                    <label style={styles.label}  htmlFor="">Username</label>
                     <input style={styles.input} type="number" />
-                    </div>                  
+                    </div>                   */}
                     
                      <div style={styles.LeftInfoWrapper}>
                     <label style={styles.label}  htmlFor="">Income</label>

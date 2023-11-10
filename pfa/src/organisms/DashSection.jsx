@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import CategorySection from './CategorySection';
+
 
 const DashSection = () => {
+    const [expenditures, setExpenditures] = useState([]);
+  
+    const addExpenditure = (newExpenditure) => {
+      setExpenditures([...expenditures, newExpenditure]);
+    };
     const container = {
         width: '533px',
         height: '220px',

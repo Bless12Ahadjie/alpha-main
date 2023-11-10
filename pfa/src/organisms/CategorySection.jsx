@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../css modules/CategorySection.module.css';
 
-const CategorySection = () => {
-//   const containerStyle = {
-//     display: 'flex',
-//     flexDirection: 'column',
-//     alignItems: 'center',
-//     marginTop: '20px',
-//     padding: '20px',
-//     borderRadius: '8px',
-//     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-//     backgroundColor: '#fff',
-//   };
+
+const CategorySection = ({ onAddExpenditure }) => {
+  const [category, setCategory] = useState('');
+  const [amount, setAmount] = useState('');
+
+  const handleCategoryChange = (event) => {
+    setCategory(event.target.value);
+  };
+
+  const handleAmountChange = (event) => {
+    setAmount(event.target.value);
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+
+  
+    onAddExpenditure({ category, amount });
+
+
+    setCategory('');
+    setAmount('');
+  };
 
   const labelStyle = {
     fontSize: '18px',

@@ -26,9 +26,9 @@ const Header = () => {
         
         <div>
             {/* <img className={styles.profile} src={image} alt="" /> */}
-            <div className={styles.profile}>
+            {/* <div className={styles.profile}>
 
-            </div>
+            </div> */}
         </div>
        
     </div>

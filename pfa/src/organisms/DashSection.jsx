@@ -3,7 +3,7 @@ import React from 'react';
 const DashSection = () => {
     const container = {
         width: '533px',
-        height: '270px',
+        height: '220px',
         borderRadius: '28px',
         background: '#c2c2c2',
         marginLeft: '65px',
@@ -87,15 +87,7 @@ const DashSection = () => {
 
             <div style={rule}></div>
 
-            <div style={TxtWrapper}>
-                <div>
-                <p style={headTxt}>Transportation</p>
-                <p style={downTxt}>you spent 50.00 on food</p>
-                </div>
-                
-                <p style={dateTxt}>last month</p>
-            </div>
-     
+
             
         </div>
     );

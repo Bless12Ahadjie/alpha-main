@@ -15,7 +15,7 @@ const OverviewBox = ({style}) => {
             
 
           </div>
-          <p className={styles.innerTxt}>₵0.00</p>
+          <p className={styles.innerTxt}>₵500.00</p>
         </div>
     );
 }

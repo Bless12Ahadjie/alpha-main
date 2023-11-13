@@ -30,8 +30,7 @@ const SignUp = () => {
           alert('Registration failed: An unknown error occurred.');
         }
       } else {
-        alert('Registration successful!');
-        navigate('/welcome-1');
+        navigate('/sign-in');
       }
     } catch (error) {
       console.error('Error parsing server response:', error);

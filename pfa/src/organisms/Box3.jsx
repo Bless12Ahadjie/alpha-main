@@ -15,7 +15,7 @@ const Box3 = () => {
             
 
           </div>
-          <p className={styles.innerTxt}>₵0.00</p>
+          <p className={styles.innerTxt}>₵3000.00</p>
         </div>
         </div>
     );

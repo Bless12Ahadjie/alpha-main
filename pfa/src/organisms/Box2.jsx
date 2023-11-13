@@ -1,7 +1,15 @@
 import React from 'react';
+import {useState} from 'react'
 import styles from '../css modules/Box2.module.css'
 
 const Box2 = () => {
+  const [income, setIncome] = useState('');
+
+  async function getIncome (ev){
+    ev.prventDefault();
+
+    const response = await fetch("http://localhoste:4000/")
+  }
     return (
         <div>
         <div className={styles.Box}>
@@ -15,7 +23,7 @@ const Box2 = () => {
             
 
           </div>
-          <p className={styles.innerTxt}>₵0.00</p>
+          <p className={styles.innerTxt}>₵5,000.00</p>
         </div>
         </div>
     );

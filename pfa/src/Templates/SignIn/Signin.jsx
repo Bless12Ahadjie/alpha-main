@@ -1,31 +1,46 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
 import Button from '../../atoms/Button';
 import { Link, Navigate } from 'react-router-dom';
 
 import styles from '../../css modules/SignIn.module.css'
 
 const Signin = () => {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [redirect, setRedirect] = useState('');
+  const [token, setToken] = useState('')
 
-  async function login(ev) {
+  const login = async (ev) => {
     ev.preventDefault();
-    const response = await fetch("http://localhost:4000/api/user/login", {
-      method: 'POST',
-      body: JSON.stringify({email, password}),
-      headers: {'Content-Type': 'application/json'},
-      credentials: 'include',
-    });
-    if(response.ok){
-      setRedirect(true)
-    }else{
-      alert('wrong credentials')
+
+    try {
+      const response = await axios.post('http://localhost:4000/api/user/login', {
+        email,
+        password,
+      });
+  
+      if (response.status === 200) {
+        const { token } = response.data;
+        setToken(token);
+        localStorage.setItem('token', token);
+        setRedirect(true);
+      } else {
+        alert('Wrong credentials');
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      alert('Login failed: An unexpected error occurred.');
     }
-  } 
-  if (redirect){
-    return <Navigate to={"/Dashboardp"}/>
+  };
+
+  if (redirect) {
+    return <Navigate to="/welcome-1" />;
   }
+  
+
+  
   return (
     <div className={styles.signup}>
     <div className={styles.wrapper}>

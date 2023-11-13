@@ -1,8 +1,49 @@
 import React from 'react';
+import { useState } from 'react';
+import { useNavigate} from 'react-router-dom';
 
 // const FullName = 'Keneth Dapaa'
 
 const ProfileForm = () => {
+    const navigate = useNavigate();
+
+    const [income,setIncome] = useState('');
+    const [limit,setLimit] = useState('');
+    const [savings,setSavings] = useState('');
+    const [redirect,setRedirect] = useState('');
+     const [username,setUsername] = useState('');
+     const [token,setToken]= useState('');
+
+     async function setProfile(ev) {
+        ev.preventDefault();
+        setToken(token);
+      
+        try {
+            const response = await fetch('http://localhost:4000/api/userProfile/set', {
+                method: 'POST',
+                body: JSON.stringify({ username, income, limit, savings }),
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': `Bearer ${token}`, 
+                },
+                credentials: 'include',
+              });
+          const responseData = await response.json();
+      
+          if (response.status !== 200) {
+            console.error('Profile settings failed:', responseData);
+            // alert(`Profile settings failed: ${responseData.message || 'An unknown error occurred.'}`);
+            navigate('/Dashboard');
+          } else {
+            alert('Registration successful!');
+            navigate('/Dashboard');
+          }
+        } catch (error) {
+          console.error('Error during fetch:', error);
+          alert('Registration failed: An unexpected error occurred.');
+        }
+      }
+      
 const styles ={
 container:{
     marginLeft: '65px',
@@ -66,12 +107,12 @@ input:{
 
     return (
         <div style={styles.container}>
-            <form  action="">
+            <form  action="" onSubmit={setProfile}>
                 <div style={styles.form}>
                 <div style={styles.LeftInfo}>
                     <div style={styles.LeftInfoWrapper}>
                     <label style={styles.label} htmlFor="">Username</label>
-                    <input style={styles.input} type="text" placeholder='Don Full' />
+                    <input style={styles.input} type="text" placeholder='username' value={username} onChange={(ev) => setUsername(ev.target.value)} />
                     </div>
 {/* 
                     <div style={styles.LeftInfoWrapper}>
@@ -81,7 +122,7 @@ input:{
                     
                      <div style={styles.LeftInfoWrapper}>
                     <label style={styles.label}  htmlFor="">Income</label>
-                    <input style={styles.input} type="number" />
+                    <input style={styles.input} type="number" value={income} onChange={(ev) => setIncome(ev.target.value)} />
                     </div>
 
 
@@ -89,12 +130,12 @@ input:{
                 <div style={styles.LeftInfo}>
                     <div style={styles.LeftInfoWrapper}>
                     <label style={styles.label} htmlFor="">Spending Limit</label>
-                    <input style={styles.input} type="number" />
+                    <input style={styles.input} type="number" value={limit} onChange={(ev) => setLimit(ev.target.value)} />
                     </div>
 
                     <div style={styles.LeftInfoWrapper}>
                     <label style={styles.label}  htmlFor="">How much will you like to save</label>
-                    <input style={styles.input} type="number" />
+                    <input style={styles.input} type="number" value={savings} onChange={(ev) => setSavings(ev.target.value)}/>
                     </div>                  
 
                 </div>

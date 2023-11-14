@@ -83,6 +83,7 @@ const LeftLogin = () => {
                     <button className={styles.btn} type="submit">
                        Login
                     </button>
+                 <p> Not registered yet?  <Link className={styles.fgt} to='/register'> Create an Account</Link></p>
 
                 </form>
                 

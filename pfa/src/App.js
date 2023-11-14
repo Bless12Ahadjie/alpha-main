@@ -9,6 +9,7 @@ import Error from './Templates/404/Error';
 import SetProfile from './Templates/SetProfile/SetProfile';
 import Faq from './Templates/FAQ/Faq';
 import Login from './Templates/SignIn/Login';
+import SignIn from './Templates/Sign Up/SignIn';
 
 
 
@@ -23,7 +24,7 @@ function App() {
        <Route path='/welcome-1' element={ <Onboard2/>}/>
        <Route path='/set-profile' element={ <SetProfile/>}/>
        <Route path='/Dashboard' element={<Dashboard/> }/>
-       <Route path='/register' element={ <SignUp/>}/>
+       <Route path='/register' element={ <SignIn/>}/>
        {/* <Route path='/Sign-in' element={ <Signin/>} /> */}
        <Route path='*' element={<Error/>}/>
        <Route path='/sign-in' element={ <Login/>}/>

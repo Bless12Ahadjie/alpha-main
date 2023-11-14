@@ -14,35 +14,37 @@ const ProfileForm = () => {
      const [username,setUsername] = useState('');
      const [token,setToken]= useState('');
 
-     async function setProfile(ev) {
-        ev.preventDefault();
-        setToken(token);
+    //  async function setProfile(ev) {
+    //     ev.preventDefault();
+    //     setToken(token);
       
-        try {
-            const response = await fetch('http://localhost:4000/api/userProfile/set', {
-                method: 'POST',
-                body: JSON.stringify({ username, income, limit, savings }),
-                headers: {
-                  'Content-Type': 'application/json',
-                  'Authorization': `Bearer ${token}`, 
-                },
-                credentials: 'include',
-              });
-          const responseData = await response.json();
+    //     try {
+    //         const response = await fetch('http://localhost:4000/api/userProfile/set', {
+    //             method: 'POST',
+    //             body: JSON.stringify({ username, income, limit, savings }),
+    //             headers: {
+    //               'Content-Type': 'application/json',
+    //               'Authorization': `Bearer ${token}`, 
+    //             },
+    //             credentials: 'include',
+    //           });
+    //       const responseData = await response.json();
       
-          if (response.status !== 200) {
-            console.error('Profile settings failed:', responseData);
-            // alert(`Profile settings failed: ${responseData.message || 'An unknown error occurred.'}`);
-            navigate('/Dashboard');
-          } else {
-            alert('Registration successful!');
-            navigate('/Dashboard');
-          }
-        } catch (error) {
-          console.error('Error during fetch:', error);
-          alert('Registration failed: An unexpected error occurred.');
-        }
-      }
+    //       if (response.status !== 200) {
+    //         console.error('Profile settings failed:', responseData);
+    //         alert(`Profile settings failed: ${responseData.message || 'An unknown error occurred.'}`);
+
+    //       } else {
+    //         alert('Registration successful!');
+    //         navigate('/Dashboard');
+    //       }
+    //     } catch (error) {
+    //       console.error('Error during fetch:', error);
+    //       alert('Registration failed: An unexpected error occurred.');
+    //     // navigate('/Dashboard');
+    //     // console.log(response)
+    //     }
+    //   }
       
 const styles ={
 container:{
@@ -107,7 +109,7 @@ input:{
 
     return (
         <div style={styles.container}>
-            <form  action="" onSubmit={setProfile}>
+            <form  action="" /*onSubmit={setProfile}*/>
                 <div style={styles.form}>
                 <div style={styles.LeftInfo}>
                     <div style={styles.LeftInfoWrapper}>

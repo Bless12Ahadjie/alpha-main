@@ -1,6 +1,6 @@
 import {Routes, Route } from 'react-router-dom';
 import SignUp from './Templates/Sign Up/SignUp';
-import Signin from './Templates/SignIn/Signin';
+// import Signin from './Templates/SignIn/Signin';
 import Dashboard from './Templates/Dashboard/Dashboard';
 import Homepage from './Templates/Homepage/Homepage';
 import Onboard2 from './Templates/Onboard/Onboard2';
@@ -8,6 +8,7 @@ import Onboard1 from './Templates/Onboard/Onboard1';
 import Error from './Templates/404/Error';
 import SetProfile from './Templates/SetProfile/SetProfile';
 import Faq from './Templates/FAQ/Faq';
+import Login from './Templates/SignIn/Login';
 
 
 
@@ -23,8 +24,10 @@ function App() {
        <Route path='/set-profile' element={ <SetProfile/>}/>
        <Route path='/Dashboard' element={<Dashboard/> }/>
        <Route path='/register' element={ <SignUp/>}/>
-       <Route path='/Sign-in' element={ <Signin/>} />
+       {/* <Route path='/Sign-in' element={ <Signin/>} /> */}
        <Route path='*' element={<Error/>}/>
+       <Route path='/sign-in' element={ <Login/>}/>
+
        
 
 

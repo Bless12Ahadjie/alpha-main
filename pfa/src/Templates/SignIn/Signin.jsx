@@ -22,7 +22,7 @@ const Signin = () => {
       });
   
       if (response.status === 200) {
-        const { token } = response.data;
+        const  token  = response.data.accessToken;
         setToken(token);
         localStorage.setItem('token', token);
         setRedirect(true);
